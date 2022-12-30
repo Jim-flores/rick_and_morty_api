@@ -51,7 +51,7 @@ const Banner = (props: Props) => {
     }
   }
   return (
-    <div className="w-[90%] px-10 h-[100vh] relative justify-center">
+    <div className="w-[90%] px-10 relative justify-center">
       <div className="w-full px-10 h-[450px] relative flex justify-center">
         <Image
           src="/banner.jpg"
@@ -74,11 +74,17 @@ const Banner = (props: Props) => {
         setCurrentPage={setCurrentPage}
         quantityPages={quantityPages}
       />
-      <div className="grid grid-cols-3 gap-4 p-5 text-white">
-        {arrayResidents?.map((url: any) => (
-          <ResidentInfo key={url} url={url} />
-        ))}
-      </div>
+      {user?.residents.length == 0 ? (
+        <div className="w-full h-full bg-white mt-5 flex justify-center items-center text-9xl font-mono">
+          No Residents
+        </div>
+      ) : (
+        <div className="grid grid-cols-3 gap-4 p-5 text-white">
+          {arrayResidents?.map((url: any) => (
+            <ResidentInfo key={url} url={url} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full h-[100vh]">
+      <main className="w-full h-[1700px]">
         <section className="justify-center max-w-7xl mx-auto flex">
           <Banner />
         </section>

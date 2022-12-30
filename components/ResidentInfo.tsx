@@ -7,7 +7,7 @@ type Props = {
 
 const ResidentInfo = ({ url }: Props) => {
   const informations: any = useInfo(url);
-  const status: any = informations?.status;
+
   return (
     <motion.div
       whileHover={{
